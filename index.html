@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Geometry Genius</title>
+
+  
+  <!-- Tailwind CSS  -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+  <!-- header  -->
+  <header class="w-[90%] mx-auto mt-8 ">
+    <div class="bg-blue-200 navbar bg-base-100 ">
+      <div class="navbar-start">
+        <a class="normal-case text-2xl mx-6">Interactive 
+         <br> Geometry Genius</a>
+      </div>
+      <div class="navbar-end">
+        <a href="./blog.html" target="_blank" class="btn btn-info text-white mx-6">Blog</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- main section  -->
+  <main >
+    <section class="w-[90%] mx-auto mt-12 flex flex-col md:flex-row lg:flex-row">
+      <div class="w-[90%] mt-5 grid  md:grid-cols-3 lg:grid-cols-3 gap-3" id="" >
+        
+        <!-- card -1  -->
+        <div class="card w-full bg-base-100 shadow-xl mt-2" id="cardColorBg1" onmouseenter="cardChangeColor1()">
+          <figure class="px-10 pt-10">
+            <img src="./images/triangle.png" alt="" class="rounded-xl w-full h-24" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title" id="triangle-Title">Triangle</h2>
+            <p>Area (A) = 0.5 X b X h </p>
+
+            <div class="flex items-center gap-2 mb-2">
+              <input  type="number" placeholder="b" class=" bg-slate-200 rounded-lg h-8 w-12 px-2" id="trianglebinput" required/>
+              <p>cm</p>
+              <input  type="number" placeholder="h" class=" bg-slate-200 rounded-lg h-8 w-12 px-2" id="trianglehinput" required/>
+              <p>cm</p>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-info text-white px-12" id="triangle-calculate" required>Calculate</button>
+            </div>
+          </div>
+        </div>
+       <!-- card - 1 end  -->
+
+         <!-- card -2  -->
+         <div class="card w-full bg-base-100 shadow-xl mt-2 " id="cardColorBg2" onmouseenter="cardChangeColor2()">
+          <figure class="px-10 pt-10">
+            <img src="./images/rectangle.png" alt="" class="rounded-xl w-full " />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title" id="Rectangle-Title">Rectangle</h2>
+            <p>Area (A) = W * I</p>
+            <div class="flex items-center gap-2 mb-2">
+              <input type="number" placeholder="W" class=" bg-slate-200 rounded-lg h-8 w-12 px-2" id="rectangleWinput"/>
+              <p>cm</p>
+              <input type="number" placeholder="I" class=" bg-slate-200 rounded-lg h-8 w-12 px-2" id="rectangleIinput"/>
+              <p>cm</p>
+            </div>
+            <div class="card-actions">
+              <button class="btn btn-info text-white px-12" id="rectangle-calculate">Calculate</button>
+            </div>
+          </div>
+        </div>
+       <!-- card - 2 end  -->
+
+         <!-- card -3  -->
+         <div class="card w-full bg-base-100 shadow-xl mt-2 " id="cardColorBg3" onmouseenter="cardChangeColor3()">
+          <figure class="px-10 pt-10 mb-2">
+            <img src="./images/parallelogram.png" alt="" class="rounded-xl w-full " />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title" id="Parallelogram-Title">Parallelogram</h2>
+            <p>Area (A) = b X h</p>
+            <p>b = <span id="ParallelogrambValue">10cm</span>, h = <span id="ParallelogramhValue">12cm</span>  </p>
+            <div class="card-actions">
+              <button class="btn btn-info text-white px-12" id="parallelogram-calculate">Calculate</button>
+            </div>
+          </div>
+        </div>
+       <!-- card - 3 end  -->
+
+       <!-- card -4  -->
+       <div class="card w-full bg-base-100 shadow-xl mt-2"  id="cardColorBg4" onmouseenter="cardChangeColor4()">
+        <figure class="px-10 pt-10">
+          <img src="./images/rhombus.png" alt="" class="rounded-xl w-full " />
+        </figure>
+        <div class="card-body items-center text-center">
+          <h2 class="card-title" id="Rhombus-Title">Rhombus</h2>
+          <p>Area(A)= 0.5 X d1 X d2</p>
+          <p>d1 = <span id="RhombusDOne"> 16cm</span>d2 = <span id="RhombusDTwo">8cm</span></p>
+          <div class="card-actions">
+            <button class="btn btn-info text-white px-12" id="rhombus-calculate">Calculate</button>
+          </div>
+        </div>
+      </div>
+     <!-- card - 4 end  -->
+       <!-- card -5  -->
+       <div class="card w-full bg-base-100 shadow-xl mt-2" id="cardColorBg5" onmouseenter="cardChangeColor5()">
+        <figure class="px-10 pt-10">
+          <img src="./images/pentagon.png" alt="" class="rounded-xl w-full h-28" />
+        </figure>
+        <div class="card-body items-center text-center">
+          <h2 class="card-title" id="Pentagon-Title">Pentagon</h2>
+          <p>Area(A)= 0.5 X p X b</p>
+          <p>P = <span id="PentagonAInput">6cm</span>, b = <span id="PentagonBInput">10cm</span></p>
+          <div class="card-actions">
+            <button class="btn btn-info text-white px-12" id="pentagon-calculate">Calculate</button>
+          </div>
+        </div>
+      </div>
+     <!-- card - 5 end  -->
+       <!-- card -6  -->
+       <div class="card w-full bg-base-100 shadow-xl mt-2" id="cardColorBg6" onmouseenter="cardChangeColor6()">
+        <figure class="px-10 pt-10">
+          <img src="./images/ellipse.png" alt="" class="rounded-xl w-full h-28" />
+        </figure>
+        <div class="card-body items-center text-center">
+          <h2 class="card-title" id="Ellipse-Title">Ellipse</h2>
+          <p>Area (A) = πab</p>
+          <p >a=<span id="EllipseAInput">10cm</span>, b=<span id="EllipseBInput">4cm</span></p>
+          <div class="card-actions">
+            <button class="btn btn-info text-white px-12" id="eliiplse-calculate">Calculate</button>
+          </div>
+        </div>
+      </div>
+     <!-- card - 6 end  -->
+
+      </div>
+
+
+      <!-- side bar  -->
+      
+        <div class=" w-[54%] table ">
+          <h1 class="text-center md:text-2xl font-bold mt-5 underline">Area Calculation</h1>
+          <div class="overflow-x-auto ">
+            <table class="mt-6 w-full my-4">
+              <tbody id="table-container">
+                               
+              </tbody>
+            </table>
+          </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- js file  -->
+  <script src="js/app.js"></script>
+  
+</body>
+
+</html>
